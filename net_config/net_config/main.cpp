@@ -17,6 +17,7 @@ int main()
 	//网卡的key可以从注册表获取, 路径: 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\
 	config.set_key("{cd574b17-73e1-42df-a50c-f95d7f15c1d0}");
 
+	//设置静态ip之前要调用下enable_dhcp, 可以把以前设置的ip和网关都清空, 否则注册表会有多个ip信息
 	if (config.enable_dhcp()) {
 		cout << "enable_dhcp success" << endl;
 
