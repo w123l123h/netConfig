@@ -14,6 +14,7 @@ int main()
 	std::locale::global(std::locale(""));
 
 	NetConfig config;
+	//网卡的key可以从注册表获取, 路径: 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\
 	config.set_key("{cd574b17-73e1-42df-a50c-f95d7f15c1d0}");
 
 	if (config.enable_dhcp()) {

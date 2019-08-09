@@ -1,4 +1,4 @@
-# forall
+# netConfig
 c++ windows wmi修改ip+网关+dns
 
 注意事项:
