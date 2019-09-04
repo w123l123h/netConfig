@@ -20,7 +20,6 @@ int main()
 	//设置静态ip之前要调用下enable_dhcp, 可以把以前设置的ip和网关都清空, 否则注册表会有多个ip信息
 	if (config.enable_dhcp()) {
 		cout << "enable_dhcp success" << endl;
-
 	}
 	else {
 		cout << "error code: " << config.get_last_error_code() << endl;
