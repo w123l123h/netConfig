@@ -333,7 +333,7 @@ bool NetConfig::exec_method(const wchar_t * method, IWbemClassObject * params_in
 {
 	bool rt = false;
 	IWbemClassObject *results = NULL;
-	auto res = p_service_->ExecMethod(path_.bstrVal, _bstr_t(L"EnableDHCP"), 0, NULL, params_instance, &results, NULL);
+	auto res = p_service_->ExecMethod(path_.bstrVal, _bstr_t(method), 0, NULL, params_instance, &results, NULL);
 	if (SUCCEEDED(res)) {
 		VARIANT vtRet;
 		VariantInit(&vtRet);
